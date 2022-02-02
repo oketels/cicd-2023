@@ -1,0 +1,45 @@
+name: Build Docker Container and Publish on Cloud Run
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    name: Cloud Run Deployment
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@master
+
+      - name: Setup GCP Service Account
+        uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
+        with:
+          version: 'latest'
+          service_account_email: ${{ secrets.GCP_SA_EMAIL }}
+          service_account_key: ${{ secrets.GCP_SA_KEY }}
+          export_default_credentials: true
+
+      - name: Configure Docker
+        run: |
+          gcloud auth configure-docker
+          
+      - name: Build Docker container
+        run: |
+          docker build -t gcr.io/${{ secrets.GCP_PROJECT_ID }}/cicd2022:latest .
+
+      - name: Push container to container registry
+        run: |
+          docker push gcr.io/${{ secrets.GCP_PROJECT_ID }}/cicd2022:latest
+          
+      - name: Deploy containerized application on Google Cloud Run
+        run: |
+          gcloud run deploy spike-boot \
+          --region europe-west1 \
+          --image gcr.io/${{ secrets.GCP_PROJECT_ID }}/cicd2022 \
+          --platform managed \
+          --allow-unauthenticated \
+          --project ${{ secrets.GCP_PROJECT_ID }}
