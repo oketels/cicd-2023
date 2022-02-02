@@ -35,7 +35,7 @@ jobs:
           
       - name: Deploy containerized application on Google Cloud Run
         run: |
-          gcloud run deploy spike-boot \
+          gcloud run deploy cicd2022 \
           --region europe-west1 \
           --image gcr.io/${{ secrets.GCP_PROJECT_ID }}/cicd2022 \
           --platform managed \
