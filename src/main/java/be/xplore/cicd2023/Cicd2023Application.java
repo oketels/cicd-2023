@@ -1,13 +1,13 @@
-package be.xplore.cicd2022;
+package be.xplore.cicd2023;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Cicd2022Application {
+public class Cicd2023Application {
 
   public static void main(String[] args) {
-    SpringApplication.run(Cicd2022Application.class, args);
+    SpringApplication.run(Cicd2023Application.class, args);
   }
 
 }

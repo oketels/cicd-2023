@@ -1,4 +1,4 @@
-package be.xplore.cicd2022;
+package be.xplore.cicd2023;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
