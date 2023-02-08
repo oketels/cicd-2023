@@ -1,10 +1,10 @@
-package be.xplore.cicd2022;
+package be.xplore.cicd2023;
 
-import be.xplore.cicd2022.domain.EngineConfiguration;
-import be.xplore.cicd2022.domain.Ship;
-import be.xplore.cicd2022.domain.ShipBuilder;
-import be.xplore.cicd2022.domain.ShipType;
-import be.xplore.cicd2022.domain.WeaponConfiguration;
+import be.xplore.cicd2023.domain.EngineConfiguration;
+import be.xplore.cicd2023.domain.Ship;
+import be.xplore.cicd2023.domain.ShipBuilder;
+import be.xplore.cicd2023.domain.ShipType;
+import be.xplore.cicd2023.domain.WeaponConfiguration;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;

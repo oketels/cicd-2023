@@ -1,4 +1,4 @@
-package be.xplore.cicd2022.domain;
+package be.xplore.cicd2023.domain;
 
 public class WeaponConfiguration {
 

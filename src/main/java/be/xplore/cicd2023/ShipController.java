@@ -1,7 +1,7 @@
-package be.xplore.cicd2022;
+package be.xplore.cicd2023;
 
-import be.xplore.cicd2022.domain.Ship;
-import be.xplore.cicd2022.domain.ShipItem;
+import be.xplore.cicd2023.domain.Ship;
+import be.xplore.cicd2023.domain.ShipItem;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;

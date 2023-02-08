@@ -14,8 +14,8 @@
     <artifactId>cicd2022</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
-    <name>cicd2022</name>
-    <description>cicd-2022</description>
+    <name>cicd2023</name>
+    <description>cicd-2023</description>
 
     <properties>
         <java.version>17</java.version>
