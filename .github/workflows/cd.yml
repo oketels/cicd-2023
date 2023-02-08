@@ -27,17 +27,17 @@ jobs:
           
       - name: Build Docker container
         run: |
-          docker build -t gcr.io/${{ secrets.GCP_PROJECT_ID }}/cicd2022:latest .
+          docker build -t gcr.io/${{ secrets.GCP_PROJECT_ID }}/cicd2023:latest .
 
       - name: Push container to container registry
         run: |
-          docker push gcr.io/${{ secrets.GCP_PROJECT_ID }}/cicd2022:latest
+          docker push gcr.io/${{ secrets.GCP_PROJECT_ID }}/cicd2023:latest
           
       - name: Deploy containerized application on Google Cloud Run
         run: |
-          gcloud run deploy cicd2022 \
+          gcloud run deploy cicd2023 \
           --region europe-west1 \
-          --image gcr.io/${{ secrets.GCP_PROJECT_ID }}/cicd2022 \
+          --image gcr.io/${{ secrets.GCP_PROJECT_ID }}/cicd2023 \
           --platform managed \
           --allow-unauthenticated \
           --project ${{ secrets.GCP_PROJECT_ID }}
