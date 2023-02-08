@@ -11,7 +11,7 @@
     </parent>
 
     <groupId>be.xplore</groupId>
-    <artifactId>cicd2022</artifactId>
+    <artifactId>cicd2023</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
     <name>cicd2023</name>

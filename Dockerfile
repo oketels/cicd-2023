@@ -15,4 +15,4 @@ FROM eclipse-temurin:17-alpine
 COPY --from=builder /app/target/cicd2023*.jar /cicd2023.jar
 
 # Run the web service on container startup.
-CMD ["java", "-Djava.security.egd=file:/dev/./urandom", "-jar", "/cicd2022.jar"]
+CMD ["java", "-Djava.security.egd=file:/dev/./urandom", "-jar", "/cicd2023.jar"]
